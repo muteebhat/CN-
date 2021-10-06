@@ -28,7 +28,7 @@ bzero(&(server_addr.sin_zero),8);
  while (1)
  {
  printf("\nClient :");
- gets(send_data);
+ fgets(send_data);
  if ((strcmp(send_data,"q") == 0) || strcmp(send_data,"Q") == 0)
  {
  sendto(sock, send_data, strlen(send_data), 0,
