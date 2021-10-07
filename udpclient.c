@@ -46,7 +46,7 @@ int main()
 
         //clients sends choice
         printf("\nClient: ");
-        gets(send_data);
+        fgets(send_data);
         sendto(sock, send_data, strlen(send_data), 0, (struct sockaddr *)&server_addr, sizeof(struct sockaddr));
 
         //If client doesn't choose 1 or 2 then exit
